@@ -40,7 +40,7 @@ app = FastAPI() # your code here
 async def get_root():
     """ Say hello!"""
     # your code here
-    return {"message:" "Welcome to this Rental Price Prediction API!"}
+    return {"message": "Welcome to this Rental Price Prediction API!"}
 
 
 # TODO: create a POST on a different path that does model inference
@@ -65,7 +65,7 @@ async def post_inference(data: Data):
         "native-country",
     ]
     data_processed, _, _, _ = process_data(
-        X=data,
+        data,
         categorical_features=cat_features,
         training=False,
         encoder=encoder
